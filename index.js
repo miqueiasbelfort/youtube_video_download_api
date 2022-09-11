@@ -1,7 +1,10 @@
 // imports modules
 const express = require("express")
 const app = express()
-const ytdl = require('ytdl-core');
+const ytdl = require('ytdl-core')
+const cors = require('cors')
+
+app.use(cors({credentials: true, origin: 'http://127.0.0.1:5173'}))
 
 // routes
 app.get("/", async(req,res) => {
