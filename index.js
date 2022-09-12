@@ -4,7 +4,7 @@ const app = express()
 const ytdl = require('ytdl-core')
 const cors = require('cors')
 
-app.use(cors({credentials: true, origin: 'http://127.0.0.1:5173'}))
+app.use(cors({credentials: true, origin: 'https://yuyudown.netlify.app'}))
 
 // routes
 app.get("/", async(req,res) => {
