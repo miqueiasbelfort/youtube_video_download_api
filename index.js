@@ -7,8 +7,8 @@ const cors = require('cors')
 app.use(cors({credentials: true, origin: 'https://yuyudown.netlify.app'}))
 
 // routes
-app.get("/", async(req,res) => {
-    const {url} = req.query
+app.post("/", async(req,res) => {
+    const {url} = req.body
     // header
     res.header('Content-Disposition', `attachment; filename=video.mp4`);
     if(url == "" || url == undefined || url == null){
